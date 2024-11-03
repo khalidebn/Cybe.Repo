@@ -20,4 +20,7 @@ This Python script allows users to change the MAC address of a specified network
 
 ```
     sudo apt-get install net-tools
+
 ```
+
+## Installation

@@ -13,3 +13,11 @@ This Python script allows users to change the MAC address of a specified network
 - Operating System: Linux
 - Python Version: Python 3.x
 - Dependencies:
+  - subprocess: Built-in Python module (no installation required).
+  - argparse: Built-in Python module (no installation required).
+
+**Network** Tools: The script uses ifconfig, which is part of the net-tools package. If ifconfig is not installed, you can install it using:
+'''
+sudo apt-get install net-tools
+
+'''

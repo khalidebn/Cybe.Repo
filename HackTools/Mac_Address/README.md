@@ -15,10 +15,9 @@ A simple Python script to change the MAC address of a network interface on Unix-
 - **Permissions:** You need superuser (root) permissions to change network settings.
 - Dependencies:
 
-  - subprocess: Built-in Python module (no installation required).
-  - argparse: Built-in Python module (no installation required).
-
-- **Network-Tools:** The script uses ifconfig, which is part of the net-tools package. If ifconfig is not installed, you can install it using:
+  - **subprocess**: Built-in Python module (no installation required).
+  - **argparse**: Built-in Python module (no installation required).
+  - **Network-Tools:** The script uses ifconfig, which is part of the net-tools package. If ifconfig is not installed, you can install it using:
 
 ```
     sudo apt-get install net-tools

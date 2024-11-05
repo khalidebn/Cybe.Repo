@@ -1,26 +1,27 @@
 # **Change MAC Address Script**
 
-This Python script allows users to change the MAC address of a specified network interface on a Linux system. It is useful for privacy, security testing, or troubleshooting network-related issues.
+A simple Python script to change the MAC address of a network interface on Unix-based operating systems. This script can be useful for network security testing, bypassing certain network restrictions, or preserving privacy by masking your device's actual hardware MAC address
 
 ## **Features**
 
-- Simple and Easy to Use: Quickly change the MAC address using a single command.
-- Argument Parsing: Uses argparse to handle command-line arguments effectively.
-- Network Management: Temporarily disables and then re-enables the network interface to apply the changes.
+- **Change MAC Address:** Easily change the MAC address of aspecified network interface.
+- **Validation:** This script includes input validation for both interface names and MAC address format.
+- **Error Handling:** Provides clear error messages if invalid input is given.
 
 ## **Requirements**
 
-- Operating System: Linux
-- Python Version: Python 3.x
+- **Operating System**: Linux
+- **Python Version:** Python 3.x
+- **Permissions:** You need superuser (root) permissions to change network settings.
 - Dependencies:
+
   - subprocess: Built-in Python module (no installation required).
   - argparse: Built-in Python module (no installation required).
 
-**Network** Tools: The script uses ifconfig, which is part of the net-tools package. If ifconfig is not installed, you can install it using:
+- **Network-Tools:** The script uses ifconfig, which is part of the net-tools package. If ifconfig is not installed, you can install it using:
 
 ```
     sudo apt-get install net-tools
-
 ```
 
 ## Installation

@@ -1,2 +1,3 @@
 *.txt
 HackTools/Network_Tools/test.py
+HackTools/NetworkScanner/NetTest.py

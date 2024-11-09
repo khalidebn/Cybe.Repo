@@ -27,14 +27,11 @@ A simple Python script to change the MAC address of a network interface on Unix-
 
 1. Clone the repository:
 
-````
-git clone https://github.com/khalidebn/cybe.repo/tree/main/HackTools/Mac_Address ```
+`git clone https://github.com/khalidebn/cybe.repo/tree/main/HackTools/Mac_Address`
 
 2. Navigate to the directory:
 
-cd change-mac-address
-
-````
+`cd change-mac-address`
 
 ## Usage
 

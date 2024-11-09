@@ -74,12 +74,6 @@ python change_mac.py -i eth0 -m 00:11:22:33:44:55
 
 To check the output of the `eth0` interface, type `ifconfig eth0`:
 
-## Safety and Disclaimer
-
-- **Root Access:** Root rights are needed for this script. When running scripts as a superuser, use caution and make sure you always know what the script is doing.
-- **Network Impact:** Your network connection may be momentarily interrupted if you change your MAC address. Use it sensibly and only in settings where you are authorized to do so.
-- **Legal Compliance:** Make sure that any changes to your MAC address are in accordance with local laws and regulations.
-
 ```
 
 eth0 Link encap:Ethernet HWaddr 00:11:22:33:44:55
@@ -93,6 +87,12 @@ RX bytes:98765432 (98.7 MB) TX bytes:123456789 (123.4 MB)
 Interrupt:20 Memory:df200000-df220000
 
 ```
+
+## Safety and Disclaimer
+
+- **Root Access:** Root rights are needed for this script. When running scripts as a superuser, use caution and make sure you always know what the script is doing.
+- **Network Impact:** Your network connection may be momentarily interrupted if you change your MAC address. Use it sensibly and only in settings where you are authorized to do so.
+- **Legal Compliance:** Make sure that any changes to your MAC address are in accordance with local laws and regulations.
 
 ## License
 

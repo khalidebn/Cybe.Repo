@@ -27,16 +27,14 @@ A simple Python script to change the MAC address of a network interface on Unix-
 
 1. Clone the repository:
 
-```
-git clone https://github.com/khalidebn/cybe.repo/tree/main/HackTools/Mac_Address
+````
+git clone https://github.com/khalidebn/cybe.repo/tree/main/HackTools/Mac_Address ```
 
 2. Navigate to the directory:
 
-```
-
 cd change-mac-address
 
-```
+````
 
 ## Usage
 
@@ -84,6 +82,7 @@ To check the output of the `eth0` interface, type `ifconfig eth0`:
 - **Legal Compliance:** Make sure that any changes to your MAC address are in accordance with local laws and regulations.
 
 ```
+
 eth0 Link encap:Ethernet HWaddr 00:11:22:33:44:55
 inet addr:192.168.1.2 Bcast:192.168.1.255 Mask:255.255.255.0
 inet6 addr: fe80::21a:2bff:fe3c:4d5e/64 Scope:Link
@@ -93,9 +92,12 @@ TX packets:654321 errors:0 dropped:0 overruns:0 carrier:0
 collisions:0 txqueuelen:1000
 RX bytes:98765432 (98.7 MB) TX bytes:123456789 (123.4 MB)
 Interrupt:20 Memory:df200000-df220000
+
 ```
 
 ## License
+
+```
 
 MIT License
 
@@ -118,3 +120,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+```
+
+
+```

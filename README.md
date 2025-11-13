@@ -1,4 +1,4 @@
-# Cyber.repo
+# Cyber.Repo
 
 Cyber.repo is a comprehensive repository dedicated to cybersecurity tools, techniques, and educational resources. This repository is designed for security professionals, developers, and enthusiasts looking to explore various aspects of cybersecurity, including vulnerability assessment, penetration testing, threat modeling, and secure coding practices.
 

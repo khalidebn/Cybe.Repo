@@ -1,9 +1,57 @@
-# Cyber.Repo
+# Cybe.Repo
 
-Cyber.repo is a comprehensive repository dedicated to cybersecurity tools, techniques, and educational resources. This repository is designed for security professionals, developers, and enthusiasts looking to explore various aspects of cybersecurity, including vulnerability assessment, penetration testing, threat modeling, and secure coding practices.
+![Python](https://img.shields.io/badge/language-Python-blue.svg)
+![HTML](https://img.shields.io/badge/language-HTML-orange.svg)
 
-Features:
-Toolkits: A collection of popular and custom-built security tools for ethical hacking and network analysis.
-Scripts: Useful scripts for automating security tasks, from reconnaissance to reporting.
-Tutorials: Step-by-step guides and tutorials on different cybersecurity concepts, including OWASP Top 10 vulnerabilities, encryption, and network defense mechanisms.
-Resources: Links to articles, books, and videos to further expand your knowledge in the field.
+## My Cybersecurity Command
+
+Welcome to **Cybe.Repo**! This repository is a collection of cybersecurity tools, scripts, or resources, mainly developed in Python, with some web interface or reporting features facilitated through HTML.
+
+### Features
+
+- **Python scripts:** Core logic for cybersecurity operations, automation, or utilities.
+- **HTML interfaces:** Simple web pages or reports to visualize data or results.
+- Modular structure for easy extension and customization
+- Easily adaptable for different cybersecurity use-cases
+
+### Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/khalidebn/Cybe.Repo.git
+   cd Cybe.Repo
+   ```
+
+2. **(Optional) Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run your script / tool:**
+   ```bash
+   python your_script.py
+   ```
+
+### Repository Structure
+
+- `src/` — Python source code / scripts
+- `web/` — HTML files and web assets
+- `requirements.txt` — Python dependencies
+
+### Contribution
+
+Feel free to fork the repo and submit pull requests. Issues and feature requests are always welcome!
+
+### License
+
+This repository is licensed under the [MIT License](LICENSE).
+
+---
+
+**Author:** [khalidebn](https://github.com/khalidebn)

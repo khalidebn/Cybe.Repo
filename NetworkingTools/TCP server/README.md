@@ -47,24 +47,16 @@ telnet 127.0.0.1 8080
 
 - Using a simple Python client:
 
-```python
-# sample_client.py
-import socket
+You can use the tcp-client script that exists in this repository to test the server, located at:
+https://github.com/khalidebn/Cybe.Repo/blob/main/NetworkingTools/TCP%20client/tcp-client.py
 
-HOST = "127.0.0.1"
-PORT = 8080
-
-with socket.create_connection((HOST, PORT)) as s:
-    s.sendall(b"Hello from client\n")
-    resp = s.recv(4096)
-    print("Server replied:", resp.decode())
-```
-
-Run:
+Run it with:
 
 ```bash
-python sample_client.py
+python "NetworkingTools/TCP client/tcp-client.py"
 ```
+
+The client will prompt for the target host and port, send a basic HTTP-style request, and print the response it receives from the server.
 
 ## Example interaction
 

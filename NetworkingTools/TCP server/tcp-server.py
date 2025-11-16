@@ -23,7 +23,8 @@ def handle_client(client_socket):
     with client_socket:
         request = client_socket.recv(1024)
         print(f"[*] Received: {request.decode('utf-8')}")
-        client_socket.send(b'ACK')
+        repsonse = input("Enter a msg to send to the client: ")
+        client_socket.send(repsonse.encode('utf-8'))
 
 if __name__ == "__main__":
     main()

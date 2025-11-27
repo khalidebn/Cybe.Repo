@@ -34,6 +34,9 @@ def process_sniffed_packet(packet):
                   "\n[+] Username & Password >> " + Style.RESET_ALL + login_info)
 
 
-print(Fore.GREEN + Style.BRIGHT +
-      "[+] Insert Your Interface\n[+] Example: (eth0, wlan0, lo)")
-sniff(input(">> "))
+try:
+    print(Fore.GREEN + Style.BRIGHT +
+          "[+] Insert Your Interface\n[+] Example: (eth0, wlan0, lo)")
+    sniff(input(">> "))
+except KeyboardInterrupt:
+    print("Oops! Try again :)")

@@ -1,71 +1,64 @@
-# TCP Client (tcp-client.py)
+# Own Netcat (KDB Own Netcat Tool)
 
-Simple TCP client script that connects to a target host and port, sends a basic HTTP GET request, and prints the response.
+A Python-based Netcat implementation for TCP networking, featuring command shell, remote command execution, and file upload capabilities.
 
-This script is intended as a small networking utility / teaching example. It uses Python's built-in `socket` module.
+## Features
 
-## File
-- tcp-client.py
-
-## Requirements
-- Python 3.x
-
-## Description
-The script:
-1. Prompts the user for a target host (IP address or domain) and a target port (1-65535).
-2. Creates a TCP socket and connects to the target.
-3. Sends a simple HTTP GET request (`GET / HTTP/1.1`) with the provided Host header.
-4. Receives up to 4096 bytes from the remote host and prints the decoded response.
-5. Closes the connection.
-
-Note: This is a very small example and does not implement timeouts, retries, or a robust receive loop. For production use or scanning, improve error handling and respect legal/ethical considerations.
+- **Listen/Connect**: Acts as either a client or server.
+- **Command Shell**: Interactive remote shell mode.
+- **Command Execution**: Run a command remotely and get output.
+- **File Upload**: Upload files from client to server.
+- **Simple Client Mode**: Send buffer/text to a TCP port.
 
 ## Usage
-1. Clone or download the repository and navigate to the folder containing `tcp-client.py`.
-2. Run the script with Python 3:
 
-```
-python3 "tcp-client.py"
+```bash
+python own_netcat.py [OPTIONS]
 ```
 
-3. When prompted, enter:
-- Target host: an IP address or domain (e.g., `example.com` or `93.184.216.34`)
-- Target port: an integer between 1 and 65535 (e.g., `80`)
+### Examples
 
-Example session:
-```
-Enter target host (IP or domain): example.com
-Enter target port (1-65535): 80
-HTTP/1.1 200 OK
-...
-```
+- **Command Shell (listen mode):**
+  ```bash
+  python own_netcat.py -t 192.168.1.108 -p 5555 -l -c
+  ```
+- **Upload a File:**
+  ```bash
+  python own_netcat.py -t 192.168.1.108 -p 5555 -l -u=mytest.txt
+  ```
+- **Execute a Command Remotely:**
+  ```bash
+  python own_netcat.py -t 192.168.1.108 -p 5555 -l -e="cat /etc/passwd"
+  ```
+- **Send Text to a Listening Server:**
+  ```bash
+  echo "KDB" | python own_netcat.py -t 192.168.1.108 -p 135
+  ```
+- **Connect as Client:**
+  ```bash
+  python own_netcat.py -t 192.168.1.108 -p 5555
+  ```
 
-## Example
-To fetch the homepage from example.com on port 80:
-- Host: example.com
-- Port: 80
+## Arguments
 
-The script will send:
-```
-GET / HTTP/1.1
-Host: example.com
-```
-and print the beginning of the HTTP response.
+- `-c`, `--command` - Launch an interactive command shell.
+- `-e`, `--execute` - Execute the supplied command on connection.
+- `-l`, `--listen` - Listen mode (server).
+- `-p`, `--port`    - TCP port to use (default: 5555).
+- `-t`, `--target`  - Target IP address or host (default: 192.168.1.203).
+- `-u`, `--upload`  - Path for file upload (`-u=filename`).
 
-## Limitations & Improvements
-- The script reads only a single `recv(4096)` chunk. For larger responses, implement a loop to read until the connection is closed or a content-length/transfer-encoding policy is handled.
-- No timeout is set — the script may hang if the server does not respond. Consider `client.settimeout(seconds)`.
-- Minimal error handling: currently it will raise exceptions for DNS failures, connection refusals, or invalid input. Wrap operations in try/except blocks to handle errors gracefully.
-- Does not validate input beyond casting the port to int. Add checks for port range and host format if required.
+## How it Works
 
-## Security & Legal Notice
-Do not use this script to scan, probe, or attack systems you do not own or have explicit permission to test. Unauthorized scanning or access can be illegal and unethical.
+- In **listen mode (-l)**, Own Netcat accepts incoming connections. Depending on other options, it launches a shell, executes a command, or accepts a file upload.
+- In **client mode**, it can send text, interact with a remote shell, or upload data.
 
-## Contributing
-Feel free to open issues or pull requests to add features like timeouts, receive loops, TLS support, or argument parsing.
+## Notes
+
+- Requires Python 3.x.
+- Some features (like command shell and upload) are available only in listen/server mode.
+- The tool is for educational and authorized network testing only.
 
 ## License
-Include or replace with your license of choice. (No license file included in this directory by default.)
 
-## Author
-Original file by: khalidebn
+MIT License (or specify appropriate license)
